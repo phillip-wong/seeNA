@@ -1,0 +1,27 @@
+Package: seeNA
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.1
+Authors@R: 
+    c(person(given = "Phillip",
+           family = "Wong",
+           role = c("aut", "cre"),
+           email = "pwong@wesleyan.edu"),
+      person(given = "Mohammed",
+           family = "Alneyadi",
+           role = "ctb",
+           email = "malneyadi@wesleyan.edu")
+           )
+Description: This package was designed to be used with datasets with various amounts of NA values. The functions within the package are to be used to deal with 
+    those NA values and help users decide on next steps. Functions include visualizations and imputation methods.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+    ggplot2,
+    ggthemes
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
