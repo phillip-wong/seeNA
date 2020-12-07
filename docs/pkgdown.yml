@@ -3,5 +3,8 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   seeNA: seeNA.html
-last_built: 2020-12-07T21:23Z
+last_built: 2020-12-07T22:30Z
+urls:
+  reference: https://phillip-wong.github.io/seeNA//reference
+  article: https://phillip-wong.github.io/seeNA//articles
 
