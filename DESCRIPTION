@@ -1,5 +1,5 @@
 Package: seeNA
-Title: seeNA
+Title: seeNA - Explore the NA
 Version: 0.0.0.1
 Authors@R: 
     c(person(given = "Phillip",
