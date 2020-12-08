@@ -20,6 +20,8 @@ navbar:
       menu:
       -  text: Introduction to seeNA
          href: articles/seeNA.html
+      -  text: Imputations in the seeNA Package
+         href: articles/Imputations.html
     - icon: fa-file-code-o
       text: "Functions"
       href: reference/index.html

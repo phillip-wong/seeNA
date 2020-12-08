@@ -2,8 +2,9 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
+  Imputations: Imputations.html
   seeNA: seeNA.html
-last_built: 2020-12-07T22:30Z
+last_built: 2020-12-08T19:26Z
 urls:
   reference: https://phillip-wong.github.io/seeNA//reference
   article: https://phillip-wong.github.io/seeNA//articles
