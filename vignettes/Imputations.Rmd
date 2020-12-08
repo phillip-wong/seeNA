@@ -21,6 +21,8 @@ many different ways, however, some of the most frequent are by using the mean an
 neighbors as well as Multivariation Imputation by Chained Equation (MICE). This packages allows for usage of a variety of different imputation methods,
 allowing users to make NA values more relevant in their respective data sets.
 
+## Explanation of MICE Imputation:
+
 ```
 library(seeNA)
 ```
