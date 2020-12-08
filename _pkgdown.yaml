@@ -9,6 +9,10 @@ reference:
     contents:
       - '`seeNA`'
       - '`makeNA`'
+  - title: Datasets Available
+    desc: ~
+    contents:
+      - '`emptyCars`'
 navbar:
   type: standard
   left:
@@ -23,7 +27,7 @@ navbar:
       -  text: Imputations in the seeNA Package
          href: articles/Imputations.html
     - icon: fa-file-code-o
-      text: "Functions"
+      text: "Functions & Data"
       href: reference/index.html
     - icon: fa-github fa-lg
       text: "Github"
