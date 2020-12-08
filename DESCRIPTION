@@ -8,7 +8,7 @@ Authors@R:
            email = "pwong@wesleyan.edu"),
       person(given = "Mohammed",
            family = "Alneyadi",
-           role = "ctb",
+           role = "aut",
            email = "malneyadi@wesleyan.edu")
            )
 Description: This package was designed to be used with datasets with various amounts of NA values. The functions within the package are to be used to deal with 

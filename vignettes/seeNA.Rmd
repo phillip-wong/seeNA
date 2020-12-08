@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Introduction
+# Introduction & fixNA
 
 When cleaning up a data set, some of the most frequent exploration begins with the `summary` function. From here, the data is broadly displayed, with NA values
 flagging the analyst to decide on their next move. Typically, a quick `na.omit` command is run, deleting all those pesky missing values that plagued the
@@ -23,11 +23,33 @@ data set.
 However! Missing values can be hidden even moreso than the typical user can discern. Missing values could be 97's, 98's, or 99's. They could even be outliers 
 like 150 in an age column. One of the first commands in the seeNA package that can be used is the `fixNA` command. This allows the user to recode certain data 
 elements to NA by default. It allows for ease of recoding. 
+
+Here we load our package and call the data set that comes with seeNA, the emptyCars data set. The data set comes with the mtcars data set from base `R`, 
+however it is loaded with 100 99 values. We then test the fixNA function on the data, cleaning up the 99's into NA values. We test to see if we have 100 from 
+`sum(is.na(randomCars))`.
+
 ```
 library(seeNA)
-df = data("emptyCars")
-fixNA(df)
-sum(is.na(df))
+data("randomCars")
+fixNA(randomCars)
+sum(is.na(randomCars))
 ```
 
+# makeNA & seeNA
 
+Some of the other basic functions included in this package are the `makeNA` and `seeNA` functions. `makeNA` takes a data frame and randomly assigns missing
+values throughout the data set. This function allows users to add missing values, or randomly recode their data set with new values.
+
+```
+data("mtcars")
+makeNA(mtcars, n_missing = 10)
+sum(is.na(mtcars)) # 10 missing values in mtcars
+```
+
+The other function, `seeNA` takes a data frame with missing values and plots a proportion of missing values per column in a data set. It allows for easy 
+visualizations to understand exactly how missing values are impacting your data set. The example is below:
+
+```
+data("emptyCars")
+seeNA(emptyCars)
+```

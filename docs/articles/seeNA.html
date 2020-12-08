@@ -99,15 +99,27 @@
 
     
     
-<div id="introduction" class="section level1">
+<div id="introduction-fixna" class="section level1">
 <h1 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h1>
+<a href="#introduction-fixna" class="anchor"></a>Introduction &amp; fixNA</h1>
 <p>When cleaning up a data set, some of the most frequent exploration begins with the <code>summary</code> function. From here, the data is broadly displayed, with NA values flagging the analyst to decide on their next move. Typically, a quick <code>na.omit</code> command is run, deleting all those pesky missing values that plagued the data set.</p>
 <p>However! Missing values can be hidden even moreso than the typical user can discern. Missing values could be 97’s, 98’s, or 99’s. They could even be outliers like 150 in an age column. One of the first commands in the seeNA package that can be used is the <code>fixNA</code> command. This allows the user to recode certain data elements to NA by default. It allows for ease of recoding.</p>
+<p>Here we load our package and call the data set that comes with seeNA, the emptyCars data set. The data set comes with the mtcars data set from base <code>R</code>, however it is loaded with 100 99 values. We then test the fixNA function on the data, cleaning up the 99’s into NA values. We test to see if we have 100 from <code><a href="https://rdrr.io/r/base/sum.html">sum(is.na(randomCars))</a></code>.</p>
 <pre><code>library(seeNA)
-df
-fixNA(df)
-sum(is.na(df))</code></pre>
+data("randomCars")
+fixNA(randomCars)
+sum(is.na(randomCars))</code></pre>
+</div>
+<div id="makena-seena" class="section level1">
+<h1 class="hasAnchor">
+<a href="#makena-seena" class="anchor"></a>makeNA &amp; seeNA</h1>
+<p>Some of the other basic functions included in this package are the <code>makeNA</code> and <code>seeNA</code> functions. <code>makeNA</code> takes a data frame and randomly assigns missing values throughout the data set. This function allows users to add missing values, or randomly recode their data set with new values.</p>
+<pre><code><a href="https://rdrr.io/r/utils/data.html">data("mtcars")
+makeNA(mtcars, n_missing = 10)
+sum(is.na(mtcars)) # 10 missing values in mtcars</a></code></pre>
+<p>The other function, <code>seeNA</code> takes a data frame with missing values and plots a proportion of missing values per column in a data set. It allows for easy visualizations to understand exactly how missing values are impacting your data set. The example is below:</p>
+<pre><code><a href="https://rdrr.io/r/utils/data.html">data("emptyCars")
+seeNA(emptyCars)</a></code></pre>
 </div>
   </div>
 
@@ -122,7 +134,7 @@ sum(is.na(df))</code></pre>
 
 
       <footer><div class="copyright">
-  <p>Developed by Phillip Wong.</p>
+  <p>Developed by Phillip Wong, Mohammed Alneyadi.</p>
 </div>
 
 <div class="pkgdown">
