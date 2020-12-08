@@ -10,8 +10,8 @@
 #' @export
 #' @return data.frame object
 #' @examples
-#' data(mtcars)
-#' makeNA(mtcars)
+#' # data(mtcars)
+#' # makeNA(mtcars)
 makeNA = function(data,  n_missing = 10, value_NA = NA){
   holder = list()
   flag = 0

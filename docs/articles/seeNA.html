@@ -66,7 +66,7 @@
   <a href="../reference/index.html">
     <span class="fa fa-file-code-o"></span>
      
-    Functions &amp; Tools
+    Functions &amp; Data
   </a>
 </li>
 <li>
@@ -102,8 +102,12 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<p><br> Here is an article on using the <code>seeNA</code> package. <br></p>
-<pre><code>library(seeNA)</code></pre>
+<p>When cleaning up a data set, some of the most frequent exploration begins with the <code>summary</code> function. From here, the data is broadly displayed, with NA values flagging the analyst to decide on their next move. Typically, a quick <code>na.omit</code> command is run, deleting all those pesky missing values that plagued the data set.</p>
+<p>However! Missing values can be hidden even moreso than the typical user can discern. Missing values could be 97’s, 98’s, or 99’s. They could even be outliers like 150 in an age column. One of the first commands in the seeNA package that can be used is the <code>fixNA</code> command. This allows the user to recode certain data elements to NA by default. It allows for ease of recoding.</p>
+<pre><code>library(seeNA)
+df
+fixNA(df)
+sum(is.na(df))</code></pre>
 </div>
   </div>
 

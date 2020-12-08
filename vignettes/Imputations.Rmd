@@ -15,12 +15,12 @@ knitr::opts_chunk$set(
 ```
 
 # What is an Imputation?
-<br>
+
 In Data Science and Statisitics, impuration is the process of replacing missing data with substituted values. Typically, imputation points can be calculated in
 many different ways, however, some of the most frequent are by using the mean and median values. Additional imputation methods revolve around using k-nearest
 neighbors as well as Multivariation Imputation by Chained Equation (MICE). This packages allows for usage of a variety of different imputation methods,
 allowing users to make NA values more relevant in their respective data sets.
-<br>
+
 ```
 library(seeNA)
 ```
