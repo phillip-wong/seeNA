@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   Imputations: Imputations.html
   seeNA: seeNA.html
-last_built: 2020-12-08T21:11Z
+last_built: 2020-12-08T22:07Z
 urls:
   reference: https://phillip-wong.github.io/seeNA//reference
   article: https://phillip-wong.github.io/seeNA//articles
