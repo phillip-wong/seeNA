@@ -12,9 +12,8 @@
 #'
 #' @return NULL
 #' @examples
-#' # data(mtcars)
-#' # x = makeNA(mtcars, n_missing = 50)
-#' # seeNA(x)
+#' # data("emptyCars")
+#' # seeNA(emptyCars)
 seeNA = function(data, color = 'magenta'){
   data[is.na(data) == FALSE] = 1L
   data[is.na(data)] = 0L

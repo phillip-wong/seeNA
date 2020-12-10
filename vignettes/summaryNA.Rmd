@@ -1,8 +1,8 @@
 ---
-title: "Imputations in seeNA"
+title: "summaryNA in seeNA"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Imputations}
+  %\VignetteIndexEntry{summaryNA}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

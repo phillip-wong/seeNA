@@ -9,6 +9,8 @@ reference:
     contents:
       - '`seeNA`'
       - '`makeNA`'
+      - '`fixNA`'
+      - '`summaryNA`'
   - title: Datasets Available
     desc: ~
     contents:
@@ -25,6 +27,8 @@ navbar:
       menu:
       -  text: Introduction to seeNA
          href: articles/seeNA.html
+      -  text: Summary Statistics in seeNA
+         href: articles/summaryNA.html
       -  text: Imputations in seeNA
          href: articles/Imputations.html
     - icon: fa-file-code-o

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>seeNA — seeNA • seeNA</title>
+<title>fixNA — fixNA • seeNA</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="seeNA — seeNA" />
-<meta property="og:description" content="seeNA takes a data frame and displays a visualization of the distribution of missing values within your data frame." />
+<meta property="og:title" content="fixNA — fixNA" />
+<meta property="og:description" content="fixNA takes a data frame and transforms value_NA into recode_NA." />
 
 
 
@@ -133,34 +133,41 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>seeNA</h1>
+    <h1>fixNA</h1>
     
-    <div class="hidden name"><code>seeNA.Rd</code></div>
+    <div class="hidden name"><code>fixNA.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>seeNA</code> takes a data frame and displays a visualization of the distribution of missing values within your data frame.</p>
+    <p><code>fixNA</code> takes a data frame and transforms value_NA into recode_NA.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>seeNA</span><span class='op'>(</span><span class='va'>data</span>, color <span class='op'>=</span> <span class='st'>"magenta"</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>fixNA</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>mtcars</span>, value_NA <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>99</span>, <span class='cn'>NA</span><span class='op'>)</span>, recode_NA <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>data</th>
-      <td><p>an object of class data.frame to visualize.</p></td>
+      <td><p>an object of class data.frame to transform.</p></td>
     </tr>
     <tr>
-      <th>color</th>
-      <td><p>color of points for visualization. Default is the color magenta.</p></td>
+      <th>value_NA</th>
+      <td><p>single element or vector of elements to transform from. Default is 99 and NA.</p></td>
+    </tr>
+    <tr>
+      <th>recode_NA</th>
+      <td><p>value to transform to. Default is NA.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>an object of class data.frame</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># data("emptyCars")</span>
-<span class='co'># seeNA(emptyCars)</span>
+    <pre class="examples"><div class='input'><span class='co'># data("randomCars")</span>
+<span class='co'># fixNA(randomCars)</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

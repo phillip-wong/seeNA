@@ -15,7 +15,6 @@ seeNA(data, color = "magenta")
 \code{seeNA} takes a data frame and displays a visualization of the distribution of missing values within your data frame.
 }
 \examples{
-# data(mtcars)
-# x = makeNA(mtcars, n_missing = 50)
-# seeNA(x)
+# data("emptyCars")
+# seeNA(emptyCars)
 }

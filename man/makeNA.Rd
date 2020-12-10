@@ -20,6 +20,6 @@ data.frame object
 \code{makeNA} takes a dataframe and converts n_missing random values into the default value of value_NA.
 }
 \examples{
-# data(mtcars)
+# data("mtcars")
 # makeNA(mtcars)
 }
