@@ -14,15 +14,20 @@ knitr::opts_chunk$set(
 )
 ```
 
-# What is an Imputation?
+# summaryNA
 
-In Data Science and Statistics, imputation is the process of replacing missing data with substituted values. Typically, imputation points can be calculated in
-many different ways, however, some of the most frequent are by using the mean and median values. Additional imputation methods revolve around using k-nearest
-neighbors as well as Multivariation Imputation by Chained Equation (MICE). This packages allows for usage of a variety of different imputation methods,
-allowing users to make NA values more relevant in their respective data sets.
+In addition to the first three functions covered in the introduction, the function discussed in this part of the vignette will be the `summaryNA` function.
+This function can be thought as similar to the `summary` function used in base R. However, rather than using actual values, `summaryNA` displays summary
+statistics based on NA values.
 
-## Explanation of MICE Imputation:
+The output of summaryNA is a brief description of the data set and total missing values, and then a percentage calculation. There are also two tables that 
+accommodate the brief description. The first table looks column wise for missing values, whereas the second table looks for missing values row wise. It then 
+displays additional statistics of the data set.
+
+An example of how to use this function is below:
 
 ```
 library(seeNA)
+data("emptyCars")
+summaryNA(emptyCars)
 ```
