@@ -105,11 +105,54 @@
 <div id="what-is-an-imputation" class="section level1">
 <h1 class="hasAnchor">
 <a href="#what-is-an-imputation" class="anchor"></a>What is an Imputation?</h1>
-<p>In Data Science and Statistics, imputation is the process of replacing missing data with substituted values. Typically, imputation points can be calculated in many different ways, however, some of the most frequent are by using the mean and median values. Additional imputation methods revolve around using k-nearest neighbors as well as Multivariation Imputation by Chained Equation (MICE). This packages allows for usage of a variety of different imputation methods, allowing users to make NA values more relevant in their respective data sets.</p>
+<p>In Data Science and Statistics, imputation is the process of replacing missing data with substituted values. Typically, imputation points can be calculated in many different ways, however, some of the most frequent are by using the mean and median values. Additional imputation methods revolve around using k-nearest neighbors as well as Multivariation Imputation by Chained Equation (MICE). These functions allow for usage of a variety of different imputation methods, allowing users to make NA values more relevant in their respective data sets.</p>
+<div id="explanation-of-mean-imputation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#explanation-of-mean-imputation" class="anchor"></a>Explanation of Mean Imputation:</h2>
+<p>Mean Imputation is a simple method that replace each missing value in a certain variable with the mean of the non-missing values for that variable.</p>
+<pre><code>library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "mean")</code></pre>
+</div>
+<div id="explanation-of-median-imputation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#explanation-of-median-imputation" class="anchor"></a>Explanation of Median Imputation:</h2>
+<p>Median Imputation works by calculating the median of non-missing values in a variable and then replacing the missing values within that variable by the median value.</p>
+<pre><code>library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "median")</code></pre>
+</div>
+<div id="explanation-of-mode-imputation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#explanation-of-mode-imputation" class="anchor"></a>Explanation of Mode Imputation:</h2>
+<p>Mode Imputation is used to replace the missing values of a certain variable by the mode of the non-missing values of that variable.</p>
+<pre><code>library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "mode")</code></pre>
+</div>
 <div id="explanation-of-mice-imputation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#explanation-of-mice-imputation" class="anchor"></a>Explanation of MICE Imputation:</h2>
-<pre><code>library(seeNA)</code></pre>
+<p>The MICE function allows the user to choose from a variety of methods to impute for multivariate missing data. By default, the Predictive Mean Matching (PMM) method is used. The MICE function can impute a combination of continuous, binary, unordered categorical and ordered categorical data. It automatically detects missing values and imputes for them by creating multiple imputations. Five imputations are created by default.</p>
+<pre><code>library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "mice")</code></pre>
+</div>
+<div id="explanation-of-missforest-imputation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#explanation-of-missforest-imputation" class="anchor"></a>Explanation of missForest Imputation:</h2>
+<p>The missForest function is a random forest imputation method used for dealing with missing values. It builds a random forest model for each variable and then uses the model to predict missing values in the variable based on the observed values. The missForest function allows the user to impute for mixes of continuous and categorical data. In fact, it performs well particularly in datasets that include different types of variables. Moreover, it yield OOB (out of bag) imputation error estimate.</p>
+<pre><code>library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "missForest")</code></pre>
+</div>
+<div id="explanation-of-amelia-imputation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#explanation-of-amelia-imputation" class="anchor"></a>Explanation of Amelia Imputation:</h2>
+<p>The Amelia function performs multiple imputation to deal with missing values in multivariate data. It uses the Expectation-Maximization with Bootstrapping EMB algorithm, which enables it to impute various types of variables in a faster approach. This function performs well when the data has multivariate normal distribution. If that is not the case, transformation can be used to make the distribution closer to normality.</p>
+<pre><code>library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "Amelia")</code></pre>
 </div>
 </div>
   </div>
