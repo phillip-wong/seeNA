@@ -20,7 +20,10 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports:
     ggplot2,
-    ggthemes
+    ggthemes,
+    mice,
+    missForest,
+    Amelia
 Suggests: 
     knitr,
     rmarkdown

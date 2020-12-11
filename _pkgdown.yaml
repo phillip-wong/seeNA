@@ -11,6 +11,7 @@ reference:
       - '`makeNA`'
       - '`fixNA`'
       - '`summaryNA`'
+      - '`imputeNA`'
   - title: Datasets Available
     desc: ~
     contents:

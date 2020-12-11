@@ -102,15 +102,15 @@
 
     
     
-<div id="what-is-an-imputation" class="section level1">
+<div id="summaryna" class="section level1">
 <h1 class="hasAnchor">
-<a href="#what-is-an-imputation" class="anchor"></a>What is an Imputation?</h1>
-<p>In Data Science and Statistics, imputation is the process of replacing missing data with substituted values. Typically, imputation points can be calculated in many different ways, however, some of the most frequent are by using the mean and median values. Additional imputation methods revolve around using k-nearest neighbors as well as Multivariation Imputation by Chained Equation (MICE). This packages allows for usage of a variety of different imputation methods, allowing users to make NA values more relevant in their respective data sets.</p>
-<div id="explanation-of-mice-imputation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#explanation-of-mice-imputation" class="anchor"></a>Explanation of MICE Imputation:</h2>
-<pre><code>library(seeNA)</code></pre>
-</div>
+<a href="#summaryna" class="anchor"></a>summaryNA</h1>
+<p>In addition to the first three functions covered in the introduction, the function discussed in this part of the vignette will be the <code>summaryNA</code> function. This function can be thought as similar to the <code>summary</code> function used in base R. However, rather than using actual values, <code>summaryNA</code> displays summary statistics based on NA values.</p>
+<p>The output of summaryNA is a brief description of the data set and total missing values, and then a percentage calculation. There are also two tables that accommodate the brief description. The first table looks column wise for missing values, whereas the second table looks for missing values row wise. It then displays additional statistics of the data set.</p>
+<p>An example of how to use this function is below:</p>
+<pre><code>library(seeNA)
+data("emptyCars")
+summaryNA(emptyCars)</code></pre>
 </div>
   </div>
 
