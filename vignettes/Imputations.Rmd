@@ -18,11 +18,65 @@ knitr::opts_chunk$set(
 
 In Data Science and Statistics, imputation is the process of replacing missing data with substituted values. Typically, imputation points can be calculated in
 many different ways, however, some of the most frequent are by using the mean and median values. Additional imputation methods revolve around using k-nearest
-neighbors as well as Multivariation Imputation by Chained Equation (MICE). This packages allows for usage of a variety of different imputation methods,
-allowing users to make NA values more relevant in their respective data sets.
+neighbors as well as Multivariation Imputation by Chained Equation (MICE). These functions  allow for usage of a variety of different imputation methods, allowing users to make NA values more relevant in their respective data sets.
 
-## Explanation of MICE Imputation:
+
+## Explanation of Mean Imputation:
+
+Mean Imputation is a simple method that replace each missing value in a certain variable with the mean of the non-missing values for that variable. 
 
 ```
 library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "mean")
+```
+
+## Explanation of Median Imputation:
+
+Median Imputation works by calculating the median of non-missing values in a variable and then replacing the missing values within that variable by the median value.
+
+```
+library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "median")
+```
+
+## Explanation of Mode Imputation:
+
+
+Mode Imputation is used to replace the missing values of a certain variable by the mode of the non-missing values of that variable.
+
+```
+library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "mode")
+```
+
+## Explanation of MICE Imputation:
+
+The MICE function allows the user to choose from a variety of methods to impute for multivariate missing data. By default, the Predictive Mean Matching (PMM) method is used. The MICE function can impute a combination of continuous, binary, unordered categorical and ordered categorical data. It automatically detects missing values and imputes for them by creating multiple imputations. Five imputations are created by default.
+```
+library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "mice")
+```
+
+## Explanation of missForest Imputation:
+
+The missForest function is a random forest imputation method used for dealing with missing values. It builds a random forest model for each variable and then uses the model to predict missing values in the variable based on the observed values. The missForest function allows the user to impute for mixes of continuous and categorical data. In fact, it performs well particularly in datasets that include different types of variables. Moreover, it yield OOB (out of bag) imputation error estimate.
+
+```
+library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "missForest")
+```
+
+## Explanation of Amelia Imputation:
+
+The Amelia function performs multiple imputation to deal with missing values in multivariate data. It uses the Expectation-Maximization with Bootstrapping EMB algorithm, which enables it to impute various types of variables in a faster approach. This function performs well when the data has multivariate normal distribution. If that is not the case, transformation can be used to make the distribution closer to normality.
+
+```
+library(seeNA)
+data(emptyCars)
+imputeNA(emptyCars, function.imp = "Amelia")
 ```
