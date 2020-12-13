@@ -4,7 +4,7 @@
 #' \code{imputeNA} imputes the missing values in a dataframe based on the specified imputation function.
 #'
 #' @param data an object of class data.frame to impute missing values.
-#' @param package An optional character string naming the imputation function. By default, the imputation function is mean.
+#' @param function.imp An optional character string naming the imputation function. By default, the imputation function is mean.
 #' @param ... additional arguments passed to the function.
 #'
 #' @import mice missForest Amelia

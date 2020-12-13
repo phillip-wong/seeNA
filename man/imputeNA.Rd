@@ -9,9 +9,9 @@ imputeNA(data = emptyCars, function.imp = "mean", ...)
 \arguments{
 \item{data}{an object of class data.frame to impute missing values.}
 
-\item{...}{additional arguments passed to the function.}
+\item{function.imp}{An optional character string naming the imputation function. By default, the imputation function is mean.}
 
-\item{package}{An optional character string naming the imputation function. By default, the imputation function is mean.}
+\item{...}{additional arguments passed to the function.}
 }
 \value{
 list or data.frame object
